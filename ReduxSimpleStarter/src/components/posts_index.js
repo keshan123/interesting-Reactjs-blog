@@ -29,11 +29,11 @@ class PostsIndex extends Component {
         return(
         <div>
             <div className="text-xs-right">
-            <Link to="/posts/new" className="btn btn-primary">
+            <Link to="/posts/new" className="new-post btn btn-primary">
             Add a Post
             </Link>
             </div>
-            <h3 className="post-index-title"> Posts </h3>
+            <h3 className="post-index-title">Recent Awesome Blog Posts </h3>
             <ul className="list-group">
             {this.renderPosts()}
             </ul>
