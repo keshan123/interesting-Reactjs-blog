@@ -1,4 +1,4 @@
-##InterestingByDefault Blog Made with React by Keshan##
+##InterestingByDefault Blog React/Redux by Keshan##
 
 ###Getting Started###
 
