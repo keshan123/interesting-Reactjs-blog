@@ -1,3 +1,20 @@
 form a {
     margin-left: 5px;
 }
+
+.show-content {
+    margin-top: 30px;
+    margin-left: 25px;
+}
+.post-title{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.post-content{
+    text-align: left;
+    padding-top: 10px;
+}
+
+.post-index-title{
+    font-size: 40px;
+}

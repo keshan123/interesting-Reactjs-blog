@@ -26,16 +26,16 @@ class PostsShow extends Component {
             return <div> Loading...</div>
         }
         return (
-                <div> 
+                <div className="show-content col-md-9"> 
                 <Link to="/"> Back to Index </Link>
                 <button 
                 className="btn btn-danger pull-xs-right"
                 onClick={this.onDeleteClick.bind(this)}
                 >Delete Post
                 </button>
-                <h3> {post.title} </h3>
-                <img src={post.categories}/>
-                <p> {post.content} </p>
+                <h3 className="post-title"> {post.title} </h3>
+                <img width="250" className="img-rounded" src={post.categories}/>
+                <p className="post-content"> {post.content} </p>
                 </div>
             )
     }
