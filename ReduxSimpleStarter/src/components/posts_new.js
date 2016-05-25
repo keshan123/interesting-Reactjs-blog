@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {reduxForm} from 'redux-form';
 import {createPost} from '../actions/index';
+import {Link} from 'react-router';
 
 class PostsNew extends Component {
     render(){
@@ -16,21 +17,27 @@ class PostsNew extends Component {
             
             <label> Title </label>
             <input type="text" className="form-control" {...title} />
-            
-            <div className="text-help">
+            <div className="text-help text-danger">
                 {title.touched ? title.error : ''}
             </div>
             
-            <label> Catergories </label>
+            <label> Categories </label>
             <input type="text" className="form-control" {...categories} />
+            <div className="text-help text-danger">
+                {categories.touched ? categories.error : ''}
+            </div>
             
             <label> Content </label>
             <textarea className="form-control" {...content} />
+            </div>
+            <div className="text-help text-danger">
+                {content.touched ? content.error : ''}
             </div>
             
             <button type="submit" className="btn btn-primary">
             Submit </button>
             
+            <Link to="/" className= "btn btn-danger"> Cancel </Link>
             </form>
         )
     }
@@ -41,6 +48,13 @@ function validate(values) {
     
     if(!values.title){
         errors.title = 'Enter a Title'
+    }
+    
+    if (!values.categories){
+        errors.categories = 'Enter Category'
+    }
+    if (!values.content){
+        errors.content = 'Enter some Content'
     }
     return errors;
 }
