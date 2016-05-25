@@ -25,7 +25,7 @@ class PostsShow extends Component {
         if(!post){
             return <div> Loading...</div>
         }
-        return (
+         return (
                 <div className="show-content col-md-9"> 
                 <Link to="/"> Back to Index </Link>
                 <button 
