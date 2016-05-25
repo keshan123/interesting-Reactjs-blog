@@ -32,11 +32,12 @@ class PostsNew extends Component {
                 {title.touched ? title.error : ''}
             </div>
             
-            <label> Categories </label>
+            <label> Image Url </label>
             <input type="text" className="form-control" {...categories} />
             <div className="text-help text-danger">
                 {categories.touched ? categories.error : ''}
             </div>
+            
             
             <label> Content </label>
             <textarea className="form-control" {...content} />
@@ -62,11 +63,12 @@ function validate(values) {
     }
     
     if (!values.categories){
-        errors.categories = 'Enter Category'
+        errors.categories = 'Image Url'
     }
     if (!values.content){
         errors.content = 'Enter some Content'
     }
+    
     return errors;
 }
 
