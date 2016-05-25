@@ -22,24 +22,24 @@ class PostsNew extends Component {
         return(
         
             <form onSubmit = {handleSubmit(this.onSubmit.bind(this))}>
-            <h3> Create a New Post </h3>
+            <h3 className="white-out"> Create a New Post </h3>
             
             <div className="form-group">
             
-            <label> Title </label>
+            <label className="white-out"> Title </label>
             <input type="text" className="form-control" {...title} />
             <div className="text-help text-danger">
                 {title.touched ? title.error : ''}
             </div>
             
-            <label> Image Url </label>
+            <label className="white-out"> Image Url </label>
             <input type="text" className="form-control" {...categories} />
             <div className="text-help text-danger">
                 {categories.touched ? categories.error : ''}
             </div>
             
             
-            <label> Content </label>
+            <label className="white-out"> Content </label>
             <textarea className="form-control" {...content} />
             </div>
             <div className="text-help text-danger">
